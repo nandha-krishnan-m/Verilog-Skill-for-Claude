@@ -2,63 +2,76 @@
 
 ## 🚀 Overview
 
-This repository provides a **comprehensive Verilog HDL skill module** designed for use with Claude AI. It enables structured assistance for **RTL design, debugging, learning, and verification** using a well-defined teaching and reference framework.
+This repository provides a **Verilog HDL skill module** designed to augment Claude AI for **RTL design, code generation, debugging, and verification workflows**.
 
-The skill transforms Claude into a **Verilog-aware assistant** capable of handling everything from **basic syntax to advanced RTL design and interview preparation**.
-
----
-
-## 🎯 Objective
-
-The goal of this project is to:
-
-* Enhance **RTL design productivity** using AI
-* Provide **structured learning for Verilog HDL**
-* Bridge the gap between **theory and practical implementation**
-* Assist in **debugging and writing synthesizable RTL code**
-* Support **VLSI interview preparation**
+The focus of this project is not just learning — but enabling **engineer-level productivity** in digital design by integrating structured Verilog knowledge with AI-assisted workflows.
 
 ---
 
-## ⚙️ Key Features
+## 🎯 Purpose
 
-* 📘 **Structured Teaching Format**
+Modern RTL design requires speed, accuracy, and strong debugging capability. This project is built to:
 
-  * Theory → Code → Mistakes → Practice
-
-* 🧠 **Context-Aware AI Skill**
-
-  * Automatically adapts to user queries
-  * Covers beginner to advanced Verilog topics
-
-* 🛠️ **RTL Design Assistance**
-
-  * Module design
-  * FSM implementation
-  * Combinational & sequential logic
-
-* 🐞 **Debugging Support**
-
-  * Identifies race conditions, latch inference, synthesis issues
-
-* 🧪 **Testbench & Simulation Help**
-
-  * Writing testbenches
-  * Simulation constructs
-  * Verification basics
-
-* 📚 **Reference-Driven Learning**
-
-  * Organized topic-wise documentation
+* Accelerate **RTL development cycles**
+* Assist in writing **synthesizable and clean Verilog code**
+* Improve **debugging efficiency**
+* Provide **design-aware responses** instead of generic AI outputs
+* Support **real-world VLSI workflows**
 
 ---
 
-## 📂 Project Structure
+## ⚙️ Core Capabilities
 
-```
+### 🔧 RTL Design Assistance
+
+* Parameterized module generation
+* Combinational and sequential logic design
+* FSM implementation
+* Synthesizable coding practices
+
+### 🐞 Debugging & Code Review
+
+* Detection of:
+
+  * Race conditions
+  * Latch inference
+  * Blocking vs non-blocking issues
+  * Simulation vs synthesis mismatches
+* Root-cause analysis with fixes
+
+### 🧪 Verification Support
+
+* Testbench development
+* Simulation constructs and debugging
+* Functional validation strategies
+
+### 📐 Synthesis-Aware Coding
+
+* Ensures generated code aligns with synthesis constraints
+* Avoids non-synthesizable constructs
+* Highlights hardware implications
+
+---
+
+## 🧠 Design Approach
+
+The skill is built with a **design-first mindset**, ensuring:
+
+* All outputs are **hardware-relevant**
+* Emphasis on **RTL correctness over syntax**
+* Awareness of **toolchain behavior (simulation vs synthesis)**
+* Alignment with **industry coding standards**
+
+---
+
+## 📂 Repository Structure
+
+```id="p8k21d"
 Verilog-Skill-for-Claude/
 │
-├── references/
+├── Skill.md                # Core AI skill definition
+│
+├── references/             # Domain knowledge base
 │   ├── 01_lexical_and_datatypes.md
 │   ├── 02_modules_and_hierarchy.md
 │   ├── 03_behavioral_modeling.md
@@ -69,85 +82,57 @@ Verilog-Skill-for-Claude/
 │   ├── 08_timing_and_delays.md
 │   ├── 09_digital_design_combinational.md
 │   └── 10_digital_design_sequential.md
-│
-└── Skill.md
 ```
 
 ---
 
-## 🧠 Skill Capabilities
+## 🛠️ Usage Workflow
 
-This skill covers:
+1. Load `Skill.md` into Claude
+2. Provide an RTL-related query, for example:
 
-* Verilog syntax and semantics
-* RTL design and coding patterns
-* Behavioral and structural modeling
-* Combinational and sequential logic design
-* FSM design
-* Testbench development
-* Simulation and debugging
-* Synthesis-aware coding practices
-* Timing and delay modeling
+   * “Design a pipelined multiplier in Verilog”
+   * “Debug this always block”
+   * “Write synthesizable FSM for UART”
+3. The system:
 
----
-
-## 🛠️ How to Use
-
-1. Load the **Skill.md** into Claude AI environment
-2. Ask any Verilog-related question, such as:
-
-   * "Write a Verilog code for a FIFO"
-   * "Explain blocking vs non-blocking assignments"
-   * "Debug this RTL code"
-3. The skill will:
-
-   * Identify the topic
-   * Load relevant references
-   * Respond using structured teaching format
+   * Identifies the design context
+   * Pulls relevant reference knowledge
+   * Generates **engineering-grade responses**
 
 ---
 
-## 📖 Reference Sources
+## 📌 Engineering Focus Areas
 
-This project is built using standard industry and academic resources:
+This skill is optimized for:
 
-* *Digital Design* — Mano & Ciletti
-* *Verilog HDL* — Samir Palnitkar
-* *Quick Reference for Verilog HDL* — Rajeev Madhavan
-
----
-
-## ⚠️ Design Philosophy
-
-* Focus on **synthesizable RTL**
-* Emphasis on **interview-relevant concepts**
-* Avoid common pitfalls like:
-
-  * Latch inference
-  * Race conditions
-  * Simulation vs synthesis mismatch
+* RTL Design (ASIC/FPGA)
+* Code Review & Debugging
+* Testbench Development
+* Interview-Oriented Problem Solving
+* Design Pattern Standardization
 
 ---
 
-## 🎓 Learning Outcomes
+## ⚠️ Design Constraints & Best Practices
 
-Through this project, you can:
-
-* Master **Verilog HDL from fundamentals to RTL**
-* Understand **real-world design constraints**
-* Improve **debugging and coding skills**
-* Prepare effectively for **VLSI/ASIC interviews**
-* Learn how to integrate **AI into hardware design workflows**
+* Enforces **non-blocking assignments in sequential logic**
+* Avoids **latch inference**
+* Promotes **parameterization and modularity**
+* Ensures **complete case/default coverage**
+* Highlights **timing and synthesis implications**
 
 ---
 
-## 🔮 Future Improvements
+## 🔬 Practical Impact
 
-* Add **SystemVerilog support**
-* Integrate with **VS Code extensions**
-* Add **automated testbench generation**
-* Include **UVM-based verification workflows**
-* Expand into **SoC/AMBA protocol support**
+Using this skill, an engineer can:
+
+* Reduce RTL development time
+* Improve first-time-right design quality
+* Catch critical bugs early
+* Standardize coding practices
+* Use AI effectively in hardware design workflows
 
 ---
 
@@ -158,13 +143,6 @@ Through this project, you can:
 
 ---
 
-## ⭐ Contribution
-
-Feel free to fork, improve, and submit pull requests.
-Suggestions and improvements are always welcome!
-
----
-
 ## 📌 Note
 
-This project is intended for **educational and productivity purposes** in VLSI and RTL design workflows.
+This repository is intended for **engineering use in RTL design workflows**, not just academic learning.
